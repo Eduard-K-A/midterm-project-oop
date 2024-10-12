@@ -548,7 +548,8 @@ void updateItemFunc(U &items, string &searchID, int &itemCount, int &newQuantity
                     repeat = true;
                 }
                 else
-                {   cout << "Invalid Price. Please enter a valid value." << endl;
+                {
+                    cout << "Invalid Price. Please enter a valid value." << endl;
                     repeat = false;
                 }
             } while (repeat);
@@ -584,7 +585,7 @@ int main()
     {
         menu();
         choice = getValidInput<int>("Enter the number: ");
-        
+
         switch (choice)
         {
         case 1: // Add Item
@@ -698,6 +699,11 @@ int main()
             break;
 
         case 4: // Display Items by Category
+            if (clothingCtr + electronicsCtr + entertainmentCtr == 0)
+            {
+                cout << "Inventory is empty. Try adding in the menu!" << endl;
+                break;
+            }
             cout << "Enter category to display: ";
             getline(cin, category);
             category = getUpperCase(category);
