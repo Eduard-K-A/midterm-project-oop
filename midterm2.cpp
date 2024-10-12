@@ -583,8 +583,8 @@ int main()
     do
     {
         menu();
-        cout << "Enter the number: ";
-        cin >> choice;
+        choice = getValidInput<int>("Enter the number: ");
+        
         cin.ignore();
 
         switch (choice)
