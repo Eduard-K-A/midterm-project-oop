@@ -585,8 +585,6 @@ int main()
         menu();
         choice = getValidInput<int>("Enter the number: ");
         
-        cin.ignore();
-
         switch (choice)
         {
         case 1: // Add Item
