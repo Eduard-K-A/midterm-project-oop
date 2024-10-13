@@ -145,9 +145,9 @@ public:
         }
     }
 
-    void displayItems() override
+        void displayItems() override
     {
-        cout << ID << setw(30) << name << setw(30) << quantity << setw(30) << price << setw(30) << category << endl;
+        cout << ID << setw(30)  << name << setw(30)  << quantity << setw(30) << price << setw(30) << category << endl;
     }
 
     bool searchItem(const string &searchID) override
@@ -222,7 +222,7 @@ public:
 
     void displayItems() override
     {
-        cout << ID << setw(30) << name << setw(30) << quantity << setw(30) << price << setw(30) << category << endl;
+        cout << ID << setw(30) << name << setw(30)  << quantity << setw(30)  << price << setw(30) << category << endl;
     }
 
     bool searchItem(const string &searchID) override
@@ -297,9 +297,9 @@ public:
         }
     }
 
-    void displayItems() override
+     void displayItems() override
     {
-        cout << ID << setw(30) << name << setw(30) << quantity << setw(30) << price << setw(30) << category << endl;
+        cout << ID << setw(30)  << name << setw(30)  << quantity << setw(30) << price << setw(30) << category << endl;
     }
 
     bool searchItem(const string &searchID) override
