@@ -5,7 +5,7 @@
 using namespace std;
 
 void menu()
-{
+{   
     cout << "----------------------------------" << endl;
     cout << "Menu" << endl;
     cout << "1 - Add Item" << endl;
@@ -591,7 +591,7 @@ int main()
         case 1: // Add Item
             do
             {
-                cout << "Input Category: ";
+                cout << "Input Category (CLOTHING, ELECTRONICS, ENTERTAINMENT): ";
                 getline(cin, category);
                 category = getUpperCase(category);
             } while (categoryCheck(category));
@@ -637,6 +637,7 @@ int main()
             cout << "Input ID: ";
             getline(cin, searchID);
 
+            IDfound = false;
             for (int i = 0; i < clothingCtr; i++)
             {
                 if (userCloth[i].searchItem(searchID))
