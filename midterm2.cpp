@@ -145,7 +145,7 @@ public:
         }
     }
 
-        void displayItems() override
+    void displayItems() override
     {
         cout << ID << setw(30)  << name << setw(30)  << quantity << setw(30) << price << setw(30) << category << endl;
     }
@@ -553,7 +553,6 @@ void updateItemFunc(U &items, string &searchID, int &itemCount, int &newQuantity
                     repeat = false;
                 }
             } while (repeat);
-
             items.updateItem(searchID, change, newQuantity, newPrice);
             return;
         }
@@ -774,8 +773,8 @@ int main()
 
             for (int i = 0; i < clothingCtr; i++)
             {
-                keySearch = userCloth[i].searchItem(searchID);
-                if (keySearch)
+                
+                if (keySearch == userCloth[i].searchItem(searchID))
                 {
                     cout << "Item found in CLOTHING category" << endl;
                     cout << "-------------------------------------------------------------------------------------------------------------------------------------" << endl;
@@ -787,8 +786,7 @@ int main()
 
             for (int i = 0; i < electronicsCtr; i++)
             {
-                keySearch = userElect[i].searchItem(searchID);
-                if (keySearch)
+                if (keySearch == userElect[i].searchItem(searchID))
                 {
                     cout << "Item found in ELECTRONICS category" << endl;
                     cout << "-------------------------------------------------------------------------------------------------------------------------------------" << endl;
@@ -800,8 +798,8 @@ int main()
 
             for (int i = 0; i < entertainmentCtr; i++)
             {
-                keySearch = userEnter[i].searchItem(searchID);
-                if (keySearch)
+                
+                if (keySearch == userEnter[i].searchItem(searchID))
                 {
                     cout << "Item found in ENTERTAINMENT category" << endl;
                     cout << "-------------------------------------------------------------------------------------------------------------------------------------" << endl;
